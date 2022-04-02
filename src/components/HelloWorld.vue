@@ -1,6 +1,37 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h2>
+      通过
+      <a href="https://cloud.tencent.com/document/product/876/46177" target="_blank">未登录 + 安全规则</a>
+      的方式调用云开发
+    </h2>
+    <p>
+      点击查看
+      <a
+        href="https://docs.cloudbase.net/cloudbase-vue/introduce.html"
+        target="_blank"
+        rel="noopener"
+      >云开发 Vue 插件</a>
+      文档
+    </p>
+
+    <template>
+      <h2>调用云函数</h2>
+      <p>
+        点击
+        <a href="javascript:;" @click="callFunction">调用 hello world 云函数</a>
+      </p>
+      <p>
+        <b>云函数执行结果</b>
+      </p>
+      <p>{{ callFunctionResult }}</p>
+    </template>
+
+    <h2>本示例 Github 源码地址：</h2>
+    <a
+      href="https://github.com/TencentCloudBase/cloudbase-templates/tree/master/vue"
+    >https://github.com/TencentCloudBase/cloudbase-templates/tree/master/vue</a>
   </div>
 </template>
 

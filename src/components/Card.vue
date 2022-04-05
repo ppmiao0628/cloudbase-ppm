@@ -4,7 +4,7 @@
     <div class="main-info">
       <div class="bank-tile">微粒贷账户</div>
       <div class="pay-fee">¥ 3000.00</div>
-      <div>
+      <div class="menu">
         <div class="operate" @click.stop='toLoad'>借钱</div>
         <div class='operate pay-btn' @click.stop='toPay'>还款</div>
       </div>
@@ -72,6 +72,37 @@ export default {
   background-size: 100%;
   background-repeat: no-repeat;
   border-color: aqua;
+  color: #fff;
+  .main-info{
+    // display: flex;
+    // color: #fff;
+    // align-content: center;
+    // justify-content: center;
+
+    // .pay-fee,
+    // .bank-tile{
+    //   display: flex;
+    //   font-size: 60/@rem;
+    // }
+    .menu{
+      display: flex;
+      justify-content: right;
+      color: black;
+  margin-top: 32/@rem;
+      .operate{
+  margin-top: 32/@rem;
+        background-color: #fff;
+        padding: 100/@rem;
+        background-repeat: no-repeat;
+        border-color: aqua;
+        border-radius: 10/@rem;
+        margin-left: 40/@rem;
+        .pay-btn{
+          margin-top: 32/@rem;
+        }
+      }
+    }
+  }
 }
 </style>
 

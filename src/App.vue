@@ -1,34 +1,24 @@
 <template>
   <div id="app">
-    <img class="logo" alt="CloudBase logo" src="./assets/cloudbase.png" />
-    <img class="logo" alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="欢迎来到我的世界" />
+    <Card msg="欢迎来到我的世界" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Card from "./components/Card.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Card,
   },
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+@rem: 200rem;
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-
-.logo {
-  width: 120px;
-  padding: 10px;
 }
 </style>

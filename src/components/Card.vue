@@ -42,6 +42,8 @@ export default {
     },
     showPanel() {
       console.log('showPanel');
+      window.parent.postMessage({type:'forward',url:encodeURIComponent('https://wx-credit-repay.tenpay.com/app/v2.0/wxf_repay_index.fcgi?showwxpaytitle=1&sp_name=cft_xykhk&replace=1#/index?showwxpaytitle=1&sp_name=cft_xykhk&replace=1')},'*') 
+      // location.href = 'http://localhost:8000/home';
     },
     toLoad() {
       console.log('toLoad');

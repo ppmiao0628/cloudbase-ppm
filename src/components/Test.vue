@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="hello">{{ msg }}</div>
+    <div></div>
   </div>
 </template>
 
@@ -9,12 +10,20 @@ export default {
   name: "HelloWorld",
   data() {
     return {
+      screen: null,
+      screenWidth: "",
+      screenHeight: "",
       envId: "",
       callFunctionResult: "",
     };
   },
   props: {
     msg: String,
+  },
+  mounted(){
+    this.screen = screen;
+    this.screenWidth = window.screen.width;
+    this.screenHeight = window.screen.height;
   },
   methods: {
     async callFunction() {

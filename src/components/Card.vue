@@ -9,7 +9,9 @@
         <div class='operate pay-btn' @click.stop='toPay'>还款</div>
       </div>
     </div>
-    
+    <div>屏幕宽{{screenWidth}}</div>
+    <div>屏幕宽{{screenHeight}}</div>
+    <div>屏幕对象{{screen}}</div>
   </div>
 </template>
 
@@ -18,12 +20,20 @@ export default {
   name: "HelloWorld",
   data() {
     return {
+      screen: null,
+      screenWidth: "",
+      screenHeight: "",
       envId: "",
       callFunctionResult: "",
     };
   },
   props: {
     msg: String,
+  },
+  mounted(){
+    this.screen = JSON.stringify(screen);
+    this.screenWidth = window.screen.width;
+    this.screenHeight = window.screen.height;
   },
   methods: {
     async callFunction() {

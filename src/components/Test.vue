@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import importHTML from '@cool-front/import-html-entry';
 export default {
   name: "HelloWorld",
   data() {
@@ -24,6 +25,14 @@ export default {
     this.screen = screen;
     this.screenWidth = window.screen.width;
     this.screenHeight = window.screen.height;
+    importHTML('http://localhost:8001/index.html').then(res=>{
+      // eslint-disable-next-line no-debugger
+      console.log(res);
+      res.getExternalScripts().then(val=>{
+        console.log(val);
+      })
+
+    })
   },
   methods: {
     async callFunction() {

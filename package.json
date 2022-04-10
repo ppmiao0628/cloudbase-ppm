@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@cloudbase/vue-provider": "^0.5.1",
+    "@cool-front/import-html-entry": "^1.9.4",
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
   },

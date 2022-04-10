@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <Card msg="欢迎来到我的世界" />
+    <Card/>
+    <!-- <Test msg="欢迎来到我的世界" ></Test> -->
   </div>
 </template>
 
 <script>
 import Card from "./components/Card.vue";
+// import Test from "./components/Test.vue";
 
 export default {
   name: "App",
   components: {
     Card,
+    // Test,
   },
 };
 </script>

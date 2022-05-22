@@ -38,7 +38,7 @@ body {
   /* width: 100vw; */
   height: 100vh;
   position:fixed;
-  filter: blur(40px);
+  /* filter: blur(40px); */
   background: url("../../assets/images/学习6.jpg") no-repeat;
 }
 #app {

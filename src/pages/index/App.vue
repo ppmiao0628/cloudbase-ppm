@@ -2,19 +2,43 @@
   <div id="app">
     <div class="music-logo"></div>
     <div>主页</div>
+    <h2>css3动画实现</h2>
+    <div id="progressbar">
+      <div id="fill" v-text="progressText"></div>
+    </div>
+    <h2>js操作dom实现</h2>
+    <div class="progressBox">
+      <div class="progressBar" v-text="progressText"></div>
+    </div>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      progressText: '0%',
+    };
   },
   mounted() {
-   
+   this.loadBar();
   },
   methods: {
+    loadBar(){
+      this.$nextTick(()=>{
+        let count = 0;
+        const jsProgressBar = this.$el.querySelector(".progressBar");
+        const timer = setInterval(() => {
+          count++;
+          jsProgressBar.style.width = count + "%";
+          console.log('ppm ', this.progressText, count);
+          this.progressText = count + "%";
+          if (count === 100) {
+            clearInterval(timer);
+          }
+        }, 17);
+      })
+    },
     getImg() {
-     
     },
     getVideo() {
     },
@@ -28,6 +52,51 @@ export default {
   display: flex;
   flex-direction: column;
   align-content: center;
+}
+
+.progressBox {
+  margin: 1rem auto;
+  width: 18rem;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 0.5rem;
+}
+
+.progressBar {
+  width: 1%;
+  height: 1.4rem;
+  text-align: center;
+  background-color: #1db10a;
+  border-radius: 0.5rem;
+  color: azure;
+}
+
+#progressbar {
+  width: 18rem;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  border-radius: 0.5rem;
+}
+
+#fill {
+  height: 1.4rem;
+  justify-content: center;
+  animation: move 2s;
+  text-align: center;
+  background-color: #1db10a;
+  color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+@keyframes move {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 .music-logo {
   width: 3.4rem;

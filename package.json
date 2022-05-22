@@ -11,7 +11,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "toserver": "npm run build && scp -r /Users/kellerme/project/tcb/ppmiao/dist/ root@119.45.162.5:/usr/share/nginx/html"
+    "toserver": "npm run build && scp -r /Users/ppmiao/ppm/project/github/cloudbase-ppm/dist/ root@119.45.162.5:/usr/share/nginx/html"
   },
   "dependencies": {
     "@cloudbase/vue-provider": "^0.5.1",

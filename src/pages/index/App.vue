@@ -52,6 +52,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-content: center;
+  text-align: center;
 }
 
 .progressBox {

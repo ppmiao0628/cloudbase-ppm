@@ -4,12 +4,7 @@
     <div class="container" :class="{ active: show, deActive }">
 
       <div class="ceshi">头部</div>
-      <div class="ceshi">ceshi</div>
-      <div class="ceshi">ceshi</div>
-      <div class="ceshi">ceshi</div>
-      <div class="ceshi">ceshi</div>
-      <div class="ceshi">ceshi</div>
-      <div class="ceshi">ceshi</div>
+      <img src="https://mqq-imgcache.gtimg.cn/res/fmd_mojo_static/wUS5ylfCfWNziPNphw6iuy7dXIRv1gSE.png" alt="">
       <div class="ceshi">ceshi</div>
       <div class="ceshi">ceshi</div>
       <div class="ceshi">ceshi</div>

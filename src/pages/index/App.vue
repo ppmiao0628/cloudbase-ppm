@@ -10,17 +10,21 @@
     <div class="progressBox">
       <div class="progressBar" v-text="progressText"></div>
     </div>
+    <div>{{ ua }}</div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
+      num: 10,
+      ua: '',
       progressText: '0%',
     };
   },
   mounted() {
-   this.loadBar();
+    this.loadBar();
+    this.ua = navigator.userAgent;
   },
   methods: {
     loadBar(){

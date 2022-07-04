@@ -11,10 +11,17 @@
       <div class="progressBar" v-text="progressText"></div>
     </div>
     <div>{{ ua }}</div>
+    <div v-for="i in 5" :key="i">
+      <Card></Card>
+    </div>
   </div>
 </template>
 <script>
+import Card from '../../components/Card.vue';
 export default {
+  components: {
+    Card
+  },
   data() {
     return {
       num: 10,
@@ -34,7 +41,7 @@ export default {
         const timer = setInterval(() => {
           count++;
           jsProgressBar.style.width = count + "%";
-          console.log('ppm ', this.progressText, count);
+          // console.log('ppm ', this.progressText, count);
           this.progressText = count + "%";
           if (count === 100) {
             clearInterval(timer);

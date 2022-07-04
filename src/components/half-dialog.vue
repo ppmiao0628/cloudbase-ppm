@@ -1,10 +1,10 @@
 <template>
   <!-- stop 阻止冒泡，half-screen-dialog作为子组件，会冒泡到父辈点击事件 -->
-  <div class="half-screen-dialog" v-if="show" :class="{ maskActive: show, deActive, 'no-animation': noShowAnimation }" @click.stop="close">
+  <div class="half-screen-dialog" v-if="show" :class="{ maskActive: show, deActive, 'no-animation': noShowAnimation }">
     <div class="container" :class="{ active: show, deActive }">
 
-      <div class="ceshi">头部</div>
-      <img src="https://mqq-imgcache.gtimg.cn/res/fmd_mojo_static/wUS5ylfCfWNziPNphw6iuy7dXIRv1gSE.png" alt="">
+      <div class="ceshi" @click.stop="close">头部</div>
+      <input type="text" name="iiii" id="iiii">
       <div class="ceshi">ceshi</div>
       <div class="ceshi">ceshi</div>
       <div class="ceshi">ceshi</div>

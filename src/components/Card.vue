@@ -9,18 +9,11 @@
         <div class='operate pay-btn' @click.stop='toPay'>还款</div>
       </div>
     </div>
-    <!-- <div>屏幕宽{{screenWidth}}</div>
-    <div>屏幕宽{{screenHeight}}</div>
-    <div>availHeight:{{availHeight}}</div>
-    <div>availWidth:{{availWidth}}</div>
-    <div>width:{{width}}</div>
-    <div>height:{{height}}</div>
-    <div>devicePixelRatio:{{devicePixelRatio}}</div>
-    <div>屏幕对象{{screen}}</div> -->
   </div>
 </template>
 
 <script>
+let pageData = 0;
 export default {
   name: "HelloWorld",
   data() {
@@ -40,7 +33,8 @@ export default {
   props: {
     msg: String,
   },
-  mounted(){
+  mounted() {
+
     this.height = window.screen.height;
     this.width = window.screen.width;
     this.availHeight = window.screen.availHeight;
@@ -48,6 +42,8 @@ export default {
     this.devicePixelRatio = window.devicePixelRatio;
     this.screenWidth = window.screen.width;
     this.screenHeight = window.screen.height;
+    pageData = new Date().getTime();
+    console.log('ppm <Card></Card>',pageData );
   },
   methods: {
     async callFunction() {
@@ -74,6 +70,7 @@ export default {
       console.log('toLoad');
     },
     toPay() {
+      console.log('ppm toPay', pageData);
       window.parent.postMessage({type:'forward',url:encodeURIComponent('https://wx-credit-repay.tenpay.com/app/v2.0/wxf_repay_index.fcgi?showwxpaytitle=1&sp_name=cft_xykhk&replace=1#/pay?bank_type=3019&card_md5=845166944f8e3affc86015d12bbca7b1')},'*') 
       console.log('toPay');
     },
